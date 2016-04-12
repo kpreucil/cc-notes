@@ -1,0 +1,105 @@
+/*Week 1*/
+/* most common link tags that get styled */
+a:link {
+    color: aliceblue;
+}
+
+a:hover {
+    color: aquamarine;
+}
+a:active{
+    color: bisque;
+}
+
+.padded {
+    padding: 200px;
+    background-color: skyblue;
+    border: 10px;
+    border-color: black;
+    margin: 100px; /* like a clock: top, right, bottom, left */
+}
+
+/* Floats 
+always need a width defined on objects. Otherwise it goes to zero   
+
+If you are floating an element with text that wraps around it but is not long enough create a clear class and use below text. */
+
+
+/* nth-child(# or variable) */
+
+/*Large Background Images */
+
+.background-container{
+    background-image: url(http://www.jonny.me/img/homeslider.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed; /*fixes background and scrolls on top*/
+}
+
+/*Position*/
+
+Relative: floats
+Absolute: positioned relative to the nearest parent element. Makes it complicated.
+
+.abs{
+    position: absolute;
+    border-color: blue;
+    top: 10px;
+    left: 10px;
+}
+
+.rel{
+    position: relative;
+}
+
+.fixed{
+    position: fixed;
+    border-color: green;
+}
+
+/*Units*/
+h1{
+    font-size: 30px;
+/*    pixels don't scale well*/
+    
+}
+/*Friday-MEDIA QUERIES*/
+
+@media print{    
+/*                Take away link decoration when printing*/
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+/*            START container size-transform when screen gets smaller*/
+.container{
+    max-width: 33%;
+    background-color: #ccc;
+}
+@media (max-width: 400px){
+    .container {
+        max-width: 100%;
+    }
+}
+/*            END container size-transform when screen gets smaller*/
+
+/*Hover*/
+.container div{
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 2s;
+}
+/*read from right-left*/
+.container:hover div{
+    max-height: 50px;
+}
+
+/*Week 2*/
+/*Circle element*/
+div{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+            

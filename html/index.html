@@ -1,0 +1,121 @@
+<!doctype html>
+<!--Week 1-->
+<!--Basic html page set-up 
+
+<!doctype html>
+<html>
+<head>
+    </head>
+<body>
+    </body>
+</html>
+
+-->
+<!--    command shortcut is cmd + ? -->
+
+<html>
+<head>
+    <link href="notes.css">
+</head>
+
+<body>
+<!--Start editing -->
+    
+    <!--Box Model-->
+    <div class="padded">
+        In here is some awesome text. In here is some awesome text. In here is some awesome text. In here is some awesome text. In here is some awesome text. In here is some awesome text. In here is some awesome text. In here is some awesome text.
+    </div>
+    
+<!--Tables
+avoid using unless actually a table of data
+
+th= table header
+tr= table row
+td= cell
+border collapse avoids the double lines
+-->
+
+<hr /> <!-- horizontal rule -->
+    
+    
+<!--    command shortcut is cmd + ? -->
+
+    
+<!--HTML Paths-->
+    1. Relative Paths
+        <img src="./images/cat.gif">
+    2. Absolute Path
+        <img src="http://localhost/images/cat.gif"> 
+            <!--Wouldn't work on internet -->
+        <img src="http://imgur.com/cat.gif">
+            <!-- works online but never grab an image from someone else's website using this method for a public site -->
+    
+<!--Absolute Pathes-->
+    /root/users/kpreucil/porfolio/index.html
+    ~ = /Users/kpreucil <!--shortcut for root reference-->
+    
+<!--Relative Paths-->
+    ./float.html <!--says in starting from where we are go to this file/folder-->
+    
+    <p>Why use a relative path if it can get messed up and can be more confusing? <br />They are a stronger link because of their flexibility. File will be found on internet if folder is uploaded. If it were absolute and on the internet it would not be able to execute the command because it is looking for the file on my computer</p>
+    
+    ../flex.html <!--go up one directory to previous folder -->
+    ../../flex.html <!--go up two directories to previous folder -->
+
+<!--Navbar-->
+    <nav class="navbar navbar-inverse">
+            <div class="container-fluid"> <!--fills entire screen-->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="">My Site</a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                       <span class="sr-only">Toggle navigation</span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="">My Other Page</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+<!--Week 2-->
+
+<!-- 
+    Shorthand code creation with emmet install
+  table>tr*3>th+td*2 +   tab  -->
+  <table>
+      <tr>
+          <th></th>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <th></th>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <th></th>
+          <td></td>
+          <td></td>
+      </tr>
+  </table>
+  
+<!--  Beautifier corrects your indentation if you get lost-->
+  
+  
+<!--     write code to be displayed     -->
+<code>
+<!--   Allows you to write code to be displayed-->
+    <pre>
+<!--Creates a block to show spacing-->
+    </pre>
+</code>
+<!--End editing -->   
+</body>
+    
+</html>

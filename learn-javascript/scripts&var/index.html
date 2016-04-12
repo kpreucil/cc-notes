@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- JavaScrip runs inside html within a script tag  -->
+    <script>
+        var hello = "Hello World";
+        console.log("hello");
+        console.log("hello");
+        hello = "Don't wann taco bout it";
+        console.log("hello");
+        console.log("hello");
+    </script>
+
+    <script>
+        // var hello + 3 = 5; // incorrect syntax
+        var hello = 5 // correct syntax
+        hello + 2 // means nothing
+        hello = hello + 2 // correct syntax, means 7, overwrites hello = 5
+        console.log(hello + 2); // adjusts this outcome without overwriting
+        console.log(hello);
+    </script>
+
+    <script>
+        // Primatives
+        var string = "Hi I am a string";
+        var number = 4.0; // 4 = 4.0 does not read decibles?
+        var bool = false;
+
+        //Compounds
+        var array = [3, "yo", 5];
+        var object = {
+            name: "erty",
+            age: 25
+        };
+
+        // Special
+        undefined; // Created variable but not set with anything
+        null; // Created variable that I specifically set to nothing. Different from 0. Absolute nothing. It is not emptyness, it is not zero. As if asking how many people are in the room, null says the room does not exist
+        NaN; // not clear what this is
+    </script>
+
+    <!--    What happens whe we create strings?-->
+    <script>
+        var greeting = "hello";
+        var name = "erty"
+        var students = 12;
+
+        //what you can start a variable name with and is case sensitive!!!
+        var _
+        var letter
+        var $
+
+        // examples
+
+        var money = -10;
+        var _money = 10000
+        var $money = 0
+        var Money = 50
+
+        //when combining words choose either underscores or camelcase. choose one and stick with it. camelcase is most common.
+        var my_money = 100000000
+        var yourMoney = -10000
+
+        // incorrect naming conventions
+        // var your-bank-account;
+        //var your bank account;
+
+        console.log(greeting + " " + name);
+        console.log("6" + 8); // prints out 68 because it will write 6 and 8 without any space
+        console.log(6 + 8); // adds
+        console.log(students * 2);
+        console.log(students / 2);
+        console.log(students + 2);
+        console.log(students - 2);
+        console.log(students % 2);
+    </script>
+
+    <!--    Abstraction 
+    var students = 12
+    is good because I only need to change the number once if we gain or lose students
+-->
+
+    <!--   Booleans are either true or false -->
+    <script>
+        var a = true;
+
+        if (a) {
+            console.log("hi!");
+        } else {
+            console.log("bye!");
+        }
+    </script>
+
+    <script>
+        var a = 3; // = is an asignment
+        if (a == 3) { // == is equal to
+            console.log("hi!");
+        } else {
+            console.log("bye");
+        }
+    </script>
+
+    <script>
+        var userInput = prompt; // = is an asignment
+        if (userInput > 3) {
+            console.log("hi!");
+        } else {
+            console.log("bye");
+        }
+    </script>
+
+    <script>
+        var userInput = prompt; // = is an asignment
+        if (userInput <= 3) {
+            console.log("hi!");
+        } else if (userInput <= 10) { //can have as many else if statments as want
+            console.log("howdy");
+        } else {
+            console.log("bye!");
+        }
+    </script>
+
+    <script>
+        var userInput = prompt; // = is an asignment
+        if (userInput <= 3) {
+            console.log("hi!");
+        }
+        if (userInput <= 10) { // if statement continues the program. else if stops once there is a solution
+            console.log("howdy");
+        } else { //this else only applies to the if above it
+            console.log("bye!");
+        }
+    </script>
+
+    <script>
+        //String if statements
+        if (user_has_ball && !is_in_tree || ) // != means is not or equals false
+    </script>
+    <!--    Manipulate style of element in Javascript benefit is in defining/creating functions -->
+    <div id="my_div">Noooo don't delete!!</div>
+    <script>
+        var div = document.getElementById("my_div");
+        var divs = document.getElementsByName();
+        var divss = document.getElementsByTagName();
+        var divsss = document.getElementsByClassName();
+
+        div.style.height = "100px";
+        div.style.width = "200px";
+        div.style.backgroundColor = "red";
+    </script>
+
+    <script>
+        document.getElementById("my_div");
+        console.log(div.innerHTML); // logs the original text in console  
+        div.innerHTML = "Hello World"; //calling up specifics within div and is overwriting it
+    </script>
+
+    <script src="./script.jst"></script>
+
+    <!--    Strings -->
+    <script>
+        var carMake = "VW Bug";
+        var carColor = 'blue';
+        var word = "That's";
+        var sentence = 'She said, "What?"';
+        var wut = "wut";
+        var sentence2 = "He replied, \"I don't know\""; //escaping string to show correct syntax in sentence
+    </script>
+
+    <!--    Type of Operator -->
+    <script>
+        var a = 30389
+        console.log(typeof (4));
+        a = "" + a;
+        console.log(a, typeof (a));
+    </script>
+
+    <!--    When writing a string in an if statement -->
+    <script>
+        var name = prompt("whati si your name?");
+
+        if (name == "erty" || name == "Erty") {
+            console.log("you're cool!");
+        } else {
+            console.log("go away");
+        }
+
+        // OR
+
+        if (name == "erty") {
+            console.log("you're cool!");
+        } else if (name == "Erty") {
+            console.log("you're awesome");
+        } else {
+            console.log("go away!")
+        }
+    </script>
+
+</body>
+
+</html>

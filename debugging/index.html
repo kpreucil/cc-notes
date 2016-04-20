@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debug</title>
+</head>
+<body>
+   
+   <h1>Debug Practice</h1>
+   <h3>Primitive = Pass By Value</h3>
+   <p>boolean <br> string <br> number <br></p>
+   <h3>Compound = Pass By Reference</h3>
+   <p>array <br> object <br> <span style="font-style:italic">basically anything you can put primitives inside of</span></p>
+    <script>
+        
+         var accounts = [
+            "erty",
+            "dave",
+            "sarah"
+        ]
+         
+    
+        
+//        function hackAccounts() {
+//            debugger;
+//            for (var i=0; i < accounts.length; i++){
+//                accounts[i] += "HACKED";
+//            }
+//        }
+//        
+//        hackAccounts();
+//        console.log(accounts);
+        
+         function hackAccount(arr, num) { //we know what array to look at because hackAccounts is looking at accounts
+            arr[num] += "HACKED!"
+        }
+        
+        function hackAccounts() { 
+            debugger;
+            for (var i=0; i < accounts.length; i++){
+               hackAccount(accounts, i); //looking at accounts
+            }
+        }
+        hackAccounts();
+        console.log(accounts);
+        
+        // OBJECTS
+        
+        var accounts2 = [
+            {
+                name: "erty",
+                money: 1000
+            },
+            {
+                name: "dave",
+                money: 2000
+            },
+            {
+                name: "sarah",
+                money: 1000000
+            }
+        ];
+//        accounts[1].money = 2000
+        function stealMoney(from, to) {
+            var fromAcct = null;
+            var toAcct = null;
+            for (var i = 0; i<accounts2.length; i++) {
+                fromAcct = accounts2[i];
+            } else if (accounts2[i].name == to) {
+                toAcct = accounts[i];
+            }
+            toAcct.money += fromAcct.money;
+            fromAcct.money = 0;
+        }
+        stealMoney("sarah", "dave");
+        stealMoney("dave", "erty");
+        
+       
+    </script>
+</body>
+</html>

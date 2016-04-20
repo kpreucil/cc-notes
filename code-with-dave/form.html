@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+
+<body>
+    <!--   Declare form first -->
+    <!--  This is for if it is for PHP. This does not work when using JS-->
+    <!--  Use post request versus get because more secure/private for method-->
+    <!--  Need a process form page otherwise this will not go anywhere-->
+    <form action="processform.php" method="post" role="form" class="form">
+
+        <input type="text" value="" name="personname" id="pname" placeholder="enter your name" required/>
+
+        <!--      Common input types-->
+        <input type="text" value="" name="personname" id="pname" placeholder="enter your name" required/>
+        
+        <input type="hidden" value="username" name="personname" id="pname" placeholder="enter your name" />
+        <!-- good for creating a userId -->
+        
+        <input type="password" value="username" name="personname" id="pname" placeholder="enter your name" />
+        
+        <input type="email" value="username" name="personname" id="pname" placeholder="enter your name" />
+        
+        <input type="number" value="username" name="personname" id="pname" min="0" max="5" />
+
+        <input type="submit" value="Submit" />
+
+
+    </form>
+
+</body>
+
+</html>

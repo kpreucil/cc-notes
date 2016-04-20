@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Looping Warm-up</h1>
+    <br>
+    <p> In the script tag create an array and loop through it to create the following patterns using "console.log"</p>
+    <span>
+    <b>Pattern 1</b>
+        <br>*
+        <br>**
+        <br>***
+        <br>****
+        <br>*****
+        <br>*****
+        <br>****
+        <br>***
+        <br>**
+        <br>*
+        <br>
+    
+    </span>
+    <br>
+    <span>
+    <b>Pattern 2</b>
+        <br>&nbsp; &nbsp; &nbsp; &nbsp; *
+        <br>&nbsp; &nbsp; &nbsp; **
+        <br>&nbsp; &nbsp; ***
+        <br>&nbsp; ****
+        <br>*****
+        <br>*****
+        <br>&nbsp; ****
+        <br>&nbsp; &nbsp; ***
+        <br>&nbsp; &nbsp; &nbsp; **
+        <br>&nbsp; &nbsp; &nbsp; &nbsp; *
+        <br>
+</span>
+
+
+
+
+
+    <script>
+        /* Write your code here! */
+        var arr = ["*", "**", "***", "****", "*****", "*****", "****", "***", "**", "*"];
+        var i = 0;
+
+        while (i <= 9) {
+            //            arr[i];
+            console.log(arr[i]);
+            i = i + 1;
+        }
+
+        var arr2 = ["*", "**", "***", "****", "*****"];
+        var i = 0;
+
+        while (i < 5) {
+            console.log(arr2[i]);
+            i = i + 1;
+        }
+        for (var i = 4; i >= 0; i = i - 1) {
+            console.log(arr2[i]);
+        }
+
+
+        var arr3 = ["    *", "   **", "  ***", " ****", "*****"];
+        var i = 0;
+
+        while (i < 5) {
+            console.log(arr3[i]);
+            i = i + 1;
+        }
+        for (var i = 4; i >= 0; i = i - 1) {
+            console.log(arr3[i]);
+        }
+
+        
+        var stars3;
+        var numStars3 = 5;
+
+        for (var i = 0; i < numStars3; i++) {
+            stars3 = "";
+            for (var j = 0; j < numStars3 - i - 1; j++) {
+                stars3 += " ";
+            }
+            for (var k = 0; k <= j; k++) {
+                stars3 += "*";
+            }
+            console.log(stars3);
+        }
+
+
+        //        var arr3 = ["    *", "   **", "  ***", " ****", "*****"];
+        //        
+        //        for (var i = 0; i < arr3.length; i++){
+        //            console.log(arr3[i]);
+        //        }
+        //        for (var i = arr3.length - 1; i >= 0; i = i-1) {
+        //            console.log(arr3[i]);
+        //        }
+    </script>
+
+
+
+
+</body>
+
+</html>

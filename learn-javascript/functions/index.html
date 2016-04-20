@@ -7,11 +7,48 @@
 </head>
 
 <body>
+<!--Start Editing-->
+    <script>
+        function f (x) {
+            return x * x;
+        }
+        
+        console.log(4, typeof(4)); //number string
+        console.log("4", typeof("4")); // string
+        console.log(true, typeof(true)); // true, boolean
+        console.log(f, typeof(f)); // function
+        
+        console.log(typeof(typeof(4))); //string
+        
+        //typeof always creates a string
+        
+    </script>
 
+        <div id="clock"></div>
+    <script>
+        var time = 10
+        
+        function ticktock() {
+            if (time >= 0) {
+                setTimeout(ticktock, 1000);
+                document.getElementById("clock").innerHTML = time;
+                time = time - 1;
+            } else {
+                document.getElementById("clock").innerHTML = "BlastOff";
+                //clearInterval(interval);
+            }
+        }
+        
+//        setTimeout(ticktock, 1000);
+//        var interval = setInterval(ticktock, 1000);
+        ticktock();
+        
+    </script>
+    
 
-    <!--   End Editing -->
+<!--   End Editing -->
 
-    <!--  Put Script at bottom of body so that Page loads before functions run -->
+<!--  Put Script at bottom of body so that Page loads before functions run -->
     <script src="script.js"></script>
 
 </body>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code With Dave</title>
+</head>
+
+<body>
+    <!--   Start Editing-->
+
+
+    <!--   Side topic when a boolean can equal not itself s = !s -->
+    <div id="switch"></div>
+    <button onclick="flipper()">Flip</button>
+
+    <script>
+        var s = true;
+
+        function flipper() {
+            s = !s;
+            if (s == true) {
+                dg('switch', 'Switch is On!')
+            }
+            if (s !== true) {
+                dg('switch', 'Switch is Off!')
+            }
+        }
+        //    function dg(did, value){ //create a function to get documentById. All I need to write now is dg(divID, and value of the id)
+        //        document.getElementById(did).innerHTML = value;
+        //    }
+        //      function gv(did){ //create a function to get value. All I need to write now is gv(vname)
+        //        var result = document.getElementById(did).value;
+        //          return result;
+        //    }
+    </script>
+    <!--    End Side topic-->
+
+
+
+<!--Start Form-->
+
+    <h2><div id="start"></div></h2>
+    <label>Variable Name</label>
+    <input type="text" id="vname" />
+    <br />
+    <!--   <input type="text" id="vdata" /> <br />-->
+    <label>Variable Type</label>
+    <select id="vdata">
+        <option value="string">String</option>
+        <option value="integer">Integer</option>
+        <option value="float">Float</option>
+    </select>
+    <br />
+    <label>Variable Value</label>
+    <input type="" id="vvalue" />
+    <br />
+    <label>Declare new var?</label>
+    <select id="vdeclare">
+        <option id="vdeclare">Yes</option>
+        <option id="vdeclare">No</option>
+    </select>
+    <br />
+    <button onclick="makeVariable()">Create</button>
+    <br />
+
+<!--   End Form HTML-->
+
+<!--   Start Scripts-->
+<!--   Start Form Processing -->
+    <script>
+        var pageTitle = "My Website";
+
+        function init() {
+
+
+        }
+
+        //       function makeVariable (varName, varDataType, varValue, varDeclare) 
+        //       {
+        //           var content = '';
+        //           if(varDeclare == 'true') {
+        //               content += 'var '; //shorthand for content = content + var
+        //           }
+        //           if(varName) {    
+        //               content += varName;
+        //               content += ' ';
+        //            }
+        //           if(varValue) {
+        //               content += '= ';
+        //               content += '"' //add double quotes so that varValue is a string
+        //               content += varValue;
+        //               content += '"'
+        //               content += ';';
+        //           } 
+        //           console.log(content);
+        //       }
+        //get element by ID
+        function dg(did, value) { //create a function to get documentById. All I need to write now is dg(divID, and value of the id)
+            document.getElementById(did).innerHTML = value;
+        }
+        //Get value of element
+        function gv(did) { //create a function to get value. All I need to write now is gv(vname)
+            var result = document.getElementById(did).value;
+            return result;
+        }
+
+        function makeVariable() //took out the varName... because now we have a varName variable that is getting the info from html.
+        {
+            var varName = gv('vname'); // var varName = document.getElementById.value;
+            var varDataType = gv('vdata');
+            var varValue = gv('vvalue');
+            var varDeclare = gv('vdeclare');
+            var content = '';
+            if (varDeclare == 'true') {
+                content += 'var '; //shorthand for content = content + var
+            }
+            if (varName) {
+                content += varName;
+                content += ' ';
+            }
+            if (varValue != "number" && varDataType != "number") {
+                content += "= Nan;";
+//                content += '= ';
+//                content += '"' //add double quotes so that varValue is a string
+//                content += varValue;
+//                content += '"'
+//                content += ';';
+            }
+//            if (varValue != "number" && varDataType != "string") {
+//                content += '= ';
+//                content += varValue;
+//                content += ';';
+//            } else {
+//                content += '= ';
+//                content += '"' //add double quotes so that varValue is a string
+//                content += varValue;
+//                content += '"'
+//                content += ';';
+//            }
+             console.log(content);
+
+        }
+        
+    </script>
+<!--
+    <script>
+        makeVariable(onclick);
+    </script>
+-->
+    <!--
+    <script>makeVariable('dog', 'string', 'spot', 'true');</script>  <!-- Call in functions separately to keep it clear 
+    seeding the function. Way of doing a test. 
+-->
+<!--End Form Processing-->
+
+
+    <!--   End Editing -->
+</body>
+
+</html>
